@@ -38,7 +38,7 @@ class App(AbstractClass):
     def run(self):
         print("Press Ctrl-C to terminate the program")
         self.select_autcomplente_function()
-        # self.keywords = WikiWords().list_
+        self.choose_keywords()
         self.keywords.sort()
 
         try:
@@ -53,3 +53,19 @@ class App(AbstractClass):
             print("**************")
             print("Procces finish")
             print("**************")
+
+    def choose_keywords(self):
+        while True:
+            try:
+                print("Do you want to use the WikiWords dataset?")
+                print("[1] - Yes")
+                print("[2] - No")
+                val = int(input())
+                if val not in [1, 2]:
+                    raise ValueError
+                self.keywords = WikiWords().list_ if val == 1 else self.keywords
+            except ValueError:
+                print("Sorry, that was not an option.", end='\n\n')
+                continue
+            else:
+                break

@@ -5,6 +5,7 @@
 To test with a bigger datset, I download the following:
 -  [WikiWords_FirstMillion_Refined_V6](https://www.kaggle.com/dataistic/wiki-words)
 
+You can choose wich dataset will be used (by default use the list of keywords that are provide in the doc).
 
 To run the project execute the followings docker commands.
 

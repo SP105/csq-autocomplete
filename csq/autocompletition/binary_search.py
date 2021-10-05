@@ -30,7 +30,7 @@ def find_ocurrence_binary_search(input_: str, keywords: list) -> list:
         elif key > input_:
             high = index - 1
 
-    if index is not None:
+    if index is not None and low < high:
         while index >= 0 and keywords[index].startswith(input_):
             index = index - 1
         index = index + 1
